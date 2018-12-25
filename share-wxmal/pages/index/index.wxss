@@ -1,0 +1,125 @@
+.img {
+ width: 100%;
+}
+
+/* 搜索框 */
+.search{
+  margin-top: 15rpx;
+  background:rgb(242, 242, 242);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.search label{
+  position: relative;
+}
+.search icon{
+  position: absolute;
+  z-index: 99;
+  left: 20rpx;
+  top:13rpx;
+  font-size: 20rpx;
+}
+.search input{
+  height: 70rpx;
+  line-height: 70rpx;
+  border-radius: 8rpx;
+  background-color: #fff;
+  color: #888;
+  font-size: 30rpx;
+  padding-left: 90rpx;
+}
+/* 列表样式 */
+page{
+  padding-bottom: 30rpx;
+}
+
+.recommend .panel-body{
+  display: flex;
+  /* justify-content:space-around; */
+  justify-content: space-between;
+}
+ .panel-body navigator{
+  width: 30%;
+} 
+ .panel-body .navigator{
+  width: 30%;
+} 
+.panel-body navigator image{
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  border-radius: 6rpx;
+}
+.navigator image{
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  border-radius: 6rpx;
+}
+.recommend .title{
+  font-size: 28rpx;
+  color: #666;
+  text-align: left;
+  line-height: 160%;
+  margin-top: 15rpx;
+}
+
+.cate-data .row{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40rpx;
+  border-bottom: 1px solid #efefef;
+  padding-bottom: 40rpx;
+}
+.cate-data .row:last-of-type{
+  border-bottom: 0px;
+  padding-bottom: 0rpx;
+  margin-bottom: 0rpx;
+}
+.cate-data .row navigator{
+  width: 100%
+}
+.cate-data .row .row-left{
+  width: 25%;
+}
+
+.cate-data .row .row-right{
+  flex: 1;
+  box-sizing: border-box;
+  padding-left: 32rpx;
+}
+.cate-data .row .info{
+  margin: 10rpx 0rpx 10rpx;
+}
+.cate-data .info image{
+  width: 24rpx; height: 24rpx; position: relative; top:4rpx;
+}
+.cate-data .desc{
+  text-indent: 2em;
+}
+.cate-data .info{
+  display: flex; flex-direction: row; font-size: 24rpx; color: #b2b2b2;
+}
+.cate-data .info view{
+  flex: 1;
+}
+.cate-data{margin-top: 10rpx;}
+
+/*tab切换效果  */
+.tab-nav{
+  height:45px;
+  line-height: 45px;
+  width: 100%;
+  border-bottom: 1px solid rgb(233, 231, 231)
+}
+.tab-nav .tab-nav-c view{
+  float: left;
+  width: 73px;
+  font-size: 30rpx;
+  text-align: center;
+  color: rgb(107, 107, 107);
+}
+.tab-nav view.on{
+  color: #3c8dbc;
+}
+/*tab切换效果  */

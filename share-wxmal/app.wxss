@@ -1,0 +1,233 @@
+/* 
+微信小程序不支持CSS3的CSS变量，但是这里定义样式变量，主要是为了规范诸如颜色、边线、字体大小等
+*/
+page{
+  font-family:-apple-system-font,Helvetica Neue,sans-serif;
+}
+
+.text-center{text-align: center;}
+
+/*  字体大小规范  */
+.font-lv1{font-size: 36rpx !important;}
+.font-lv2{font-size: 32rpx !important;}
+.font-lv3{font-size: 28rpx !important;}
+.font-lv4{font-size: 24rpx !important;}
+.font-lv5{font-size: 20rpx !important;}
+
+
+.strong{font-weight: bold;}
+
+/*  margin   */
+.mgt-15rpx{margin-top: 15rpx;}
+.mgb-15rpx{margin-bottom: 15rpx;}
+.mgl-15rpx{margin-left: 15rpx;}
+.mgr-15rpx{margin-right: 15rpx;}
+.mgt-30rpx{margin-top: 30rpx;}
+.mgb-30rpx{margin-bottom: 30rpx;}
+.mgl-30rpx{margin-left: 30rpx;}
+.mgr-30rpx{margin-right: 30rpx;}
+
+/*  padding  */
+.pdt-15rpx{padding-top: 15rpx;}
+.pdb-15rpx{padding-bottom: 15rpx;}
+.pdl-15rpx{padding-left: 15rpx;}
+.pdr-15rpx{padding-right: 15rpx;}
+.pdt-30rpx{padding-top: 30rpx;}
+.pdb-30rpx{padding-bottom: 30rpx;}
+.pdl-30rpx{padding-left: 30rpx;}
+.plr-30rpx{padding-right: 30rpx;}
+
+
+/*  颜色规范  */
+/*  黑  */
+.color-black{color: #000;}
+/*  淡黑  */
+.color-semi{color: #353535;}
+/*  灰色  */
+.color-grey{color: #888888;}
+/*  浅灰  */
+.color-light{color: #b2b2b2;}
+/*  绿色  */
+.color-green{color: #09bb09;}
+/*  红色  */
+.color-red{color: #e64340;}
+/*  信息提示颜色  */
+.color-info,.color-link{color: #00acff;}
+
+/*  背景和边线颜色  */
+.bd-color{border-color: #f1f1f1;}
+.bg-color{background-color: #f1f1f1;}
+
+.img-responsive{max-width: 100%;}
+.img-maxwidth{width: 100%;}
+
+.border-basic{border:1px solid #efefef;}
+
+
+/*  行高 line-height  */
+.lh-100{line-height: 100%;}
+.lh-150{line-height: 150%;}
+.lh-170{line-height: 170%;}
+.lh-180{line-height: 180%;}
+.lh-200{line-height: 200%;}
+
+/*  圆角  */
+.radius-basic,.cover{border-radius: 6rpx;}
+.radius-circle{border-radius: 100%;}
+
+/*  过渡动画  */
+.transition{
+  transition: all 0.5s;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.col-1 {
+  flex: 0 0 8.333333%;
+  max-width: 8.333333%;
+}
+
+.col-2 {
+  flex: 0 0 16.666667%;
+  max-width: 16.666667%;
+}
+
+.col-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.col-4 {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+
+.col-5 {
+  flex: 0 0 41.666667%;
+  max-width: 41.666667%;
+}
+
+.col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.col-7 {
+  flex: 0 0 58.333333%;
+  max-width: 58.333333%;
+}
+
+.col-8 {
+  flex: 0 0 66.666667%;
+  max-width: 66.666667%;
+}
+
+.col-9 {
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+
+.col-10 {
+  flex: 0 0 83.333333%;
+  max-width: 83.333333%;
+}
+
+.col-11 {
+  flex: 0 0 91.666667%;
+  max-width: 91.666667%;
+}
+
+.col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+/**app.wxss**/
+.box-shadow{
+  box-shadow: 0px 2px 5px rgba(0,0,0,.1);
+}
+.base-padding{
+  box-sizing: border-box;
+  padding: 0rpx 30rpx;
+}
+.base-margin-bottom{
+  margin-bottom: 1rpx;
+}
+.pull-right{
+  float: right;
+}
+.text-right{
+  text-align: right;
+}
+
+.panel-heading{
+  margin-bottom: 30rpx;
+}
+/* 显示两行，溢出文字用‘...’替换 */
+.ellipsis-1row{
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.ellipsis-2row{
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.ellipsis-3row{
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.ellipsis-4row{
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.text-muted{
+  color: #888888;
+   font-size: 28rpx; 
+  line-height: 170%;
+  text-align: left;
+}
+
+.cover{border-radius: 6rpx;}
+navigator:hover{background: transparent;}
+/* 授权 按钮*/
+.auth{
+  color: #fff !important;
+  position: absolute;
+  left: 50%;
+  top: 98px;
+  transform: translate(-50%, -50%);
+  /* box-shadow: 10px 10px 5px #dfdbdb; */
+  background: #fff;
+  text-align: center;
+  background: #09bb09 !important;
+  border-radius: 50%;
+  width: 92px;
+  height: 92px;
+  line-height: 92px;
+  font-size: 12px;
+
+}
+.auth::after{
+  border: none;
+}

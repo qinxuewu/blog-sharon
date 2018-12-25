@@ -1,0 +1,7 @@
+<!--pages/webview/webview.wxml-->
+
+<!-- 
+https://gitee.com/qinxuewu/events
+指向
+ -->
+<web-view src="https://www.qinxuewu.club/"></web-view>

@@ -1,0 +1,27 @@
+<import src="/html2wxml-template/html2wxml.wxml" />
+
+<view class='row info'>
+ <view class='col-8'>
+    <text class='ellipsis-2row font-lv1'>{{postTitle}}</text>
+  </view>
+</view>
+
+<view class='data'>
+  <view class='row'>
+    <view class='col'>
+      <text class='font-lv3'>{{postViews}}</text>
+      <text class='text-muted font-lv5'>阅读</text>
+    </view>
+    <view class='col'>
+      <text class='font-lv3'>{{postDate}}</text>
+      <text class='text-muted font-lv5'>发表于</text>
+    </view>
+  </view>
+</view>
+
+
+<!-- // 将Page中的text数据作为Markdown格式渲染 -->
+
+
+<htmltowxml text="{{postContentMd}}" highlightLanguages="{{['html','js','php','css','cpp','ruby']}}" bindWxmlTagATap="wxmlTagATap"  type="md"></htmltowxml>
+<i-toast id="toast" />

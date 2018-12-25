@@ -1,0 +1,62 @@
+<!--搜索框-->
+<!--  搜索框  -->
+<view class='search base-padding base-margin-bottom'>
+  <label>
+    <icon type='search'></icon>
+    <input type='search' placeholder="请输入搜索关键字" bindconfirm="onSearch"/>
+  </label>
+</view>
+<!--轮播图 -->
+<swiper
+  indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}"
+  interval="{{interval}}"
+  duration="{{duration}}"
+>
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+     <navigator open-type="navigate" url=''>
+     <image  src="{{item}}" class="slide-image" class='img'  />
+     </navigator>
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- tab标签页-->
+<view class="container">
+  <view class='tab'>
+      <scroll-view scroll-x="true" class='tab-nav' scroll-left='{{scrollLeft}}' scroll-with-animation="true">
+        <view class='tab-nav-c' style='width:{{navlist.length*90}}px'>
+       <view wx:for="{{navlist}}" wx:key="unique" class='{{current==index?"on":""}}' data-current="{{index}}" bindtap='tab'>{{item.cateName}}</view> 
+        </view>
+      </scroll-view>
+  </view>
+</view>  
+
+<!--  文章列表展示  -->
+<view class='panel base-padding base-margin-bottom cate-data'>
+  <view class='panel-body'>
+
+      <view class='row' id="{{item.postId}}" bindtap='details' wx:for="{{content}}">
+        <view class='row-left'>
+          <navigator url='/pages/details/details?id={{item.postId}}'>
+            <image mode='widthFix' class='box-shadow' wx:if="{{item.postThumbnail==null}}" src='/images/java.jpeg'/>
+              <image mode='widthFix' class='box-shadow' wx:if="{{item.postThumbnail!=null}}" src='http://www.qinxuewu.club/{{item.postThumbnail}}'/>
+          </navigator>
+        </view>
+        <view class='row-right'>
+          <view    class='ellipsis-1row font-lv2'>{{item.postTitle}}</view>
+          <view class='text-muted info'>
+            <view><image src='/images/clock.png'></image>{{item.postDate}}</view>
+            <view> <image src='/images/eye.png'></image> {{item.postViews}} 阅读 </view>
+          </view>
+          <view class='text-muted ellipsis-3row desc'>
+              {{item.postSummary}}
+          </view>
+        </view>
+      </view>
+
+  </view>
+</view>
+<i-toast id="toast" />
+<i-load-more tip="{{tip}}" loading="{{loading}}" />

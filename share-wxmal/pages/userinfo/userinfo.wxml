@@ -1,0 +1,43 @@
+<i-notice-bar icon="systemprompt" loop>
+   一款简单微信小程序个人博客。后端基于SpringBoot实现。https://gitee.com/qinxuewu/blog-sharon
+</i-notice-bar>
+<view class='base-padding row user-photo'>
+  <view class='user'>
+      <image  class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <view class='username'>{{userInfo.nickName}}</view>
+    <view class='color-grey font-lv3'>为api 生,为框架死，为 debug 奋斗一辈子。</view>
+  </view>
+</view>
+
+
+
+<view class='base-padding row base-info'>
+  <navigator url='/pages/webview/webview' class='col-12'>
+    <image src='/images/about-us.png'></image> 关于我们 
+    <image class='pull-right' src='/images/right-angle.png'></image>
+  </navigator>
+  <!-- <navigator url='/pages/placard/placard' class='col-12'>
+    <image src='/images/about-us.png'></image> 跳转生成生成海报
+    <image class='pull-right' src='/images/right-angle.png'></image>
+  </navigator> -->
+   <button open-type='share' class='share'>
+      <image src='/images/share.png'></image> 分享好友 
+   </button>
+     <button  bindtap='gotoSubmit' class='share'>
+      <image src='/images/share.png'></image> 生成海报
+   </button>
+</view>
+<i-toast id="toast" />
+<!-- 授权弹窗 -->
+<button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class="auth"  hidden="{{hiddenName}}">点击授权</button>
+
+<canvas  canvas-id="canvas"  class="canvas" style="position:absolute;width:{{canvasWidth}};height:{{canvasHeight}};left:{{canvasLeft}};">
+</canvas>
+
+<!-- 弹框 -->
+<view class='tankuang2' wx:if="{{showhaibao}}">
+    <view class='container1'>
+          <image style="width:100%;height:90%"  src="{{imagePath}}" bindtap="previewImg" class='haibao'></image>        
+    </view>
+     <button class='savelocalImg'  bindtap="savelocalImg">保存图片</button>
+</view>

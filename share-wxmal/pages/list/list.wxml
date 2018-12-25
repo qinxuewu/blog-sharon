@@ -1,0 +1,31 @@
+
+<!--  文章列表展示  -->
+<view class='panel base-padding base-margin-bottom cate-data'>
+  <view class='panel-body'>
+
+   <view class='row' id="{{item.postId}}" bindtap='details' wx:for="{{content}}">
+        <view class='row-left'>
+          <navigator url='/pages/details/details?id={{item.postId}}'>
+            <image mode='widthFix' class='box-shadow' wx:if="{{item.postThumbnail==null}}" src='/images/java.jpeg'/>
+              <image mode='widthFix' class='box-shadow' wx:if="{{item.postThumbnail!=null}}" src='http://www.qinxuewu.club/{{item.postThumbnail}}'/>
+          </navigator>
+        </view>
+        <view class='row-right'>
+          <view    class='ellipsis-1row font-lv2'>{{item.postTitle}}</view>
+          <view class='text-muted info'>
+            <view><image src='/images/clock.png'></image>{{item.postDate}}</view>
+            <view> <image src='/images/eye.png'></image> {{item.postViews}} 阅读 </view>
+          </view>
+          <view class='text-muted ellipsis-3row desc'>
+              {{item.postSummary}}
+          </view>
+        </view>
+      </view>
+
+
+
+
+  </view>
+</view>
+<i-load-more tip="{{tip}}" loading="{{loading}}" />
+<i-toast id="toast" />

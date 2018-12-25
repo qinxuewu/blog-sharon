@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "详情",
+  "usingComponents": {
+    "htmltowxml": "plugin://htmltowxml/view"
+  }
+}

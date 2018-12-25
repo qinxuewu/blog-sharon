@@ -1,0 +1,8 @@
+<button bindtap='gotoSubmit'>生成图片</button>
+<!-- 弹框 -->
+<view class='tankuang2' wx:if="{{showhaibao}}">
+    <view class='container1' bindtap="previewImg">
+          <image style="width:100%;height:80%"  src="{{imagePath}}" ></image>
+    </view>
+</view>
+<canvas style="width:{{windowW}}px;height:{{windowH}}px;display:{{maskHidden?'none':''}}" canvas-id="mycanvas" />

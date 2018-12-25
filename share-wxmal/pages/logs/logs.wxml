@@ -1,0 +1,25 @@
+<view class='base-padding'>
+<view class='panel'>
+  <view class='row'>
+    
+    
+  <navigator url='/pages/list/list?cateUrl={{item.cateUrl}}' class='col-6 item' wx:for="{{result}}" wx:if="{{item.cateName !='全部'}}">
+      <view class='row'>
+        <view class='col-4'>
+          <image class='img-responsive' mode='widthFix' src='/images/cate-be-java.png'></image>
+        </view>
+        <view class='col-8'>
+          <view class='ellipsis-1row'>{{item.cateName}}</view>
+          <view class='text-muted'> {{item.count}}篇</view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+</view>
+
+</view>
+<i-toast id="toast" />
+
+
+
+
