@@ -1,8 +1,12 @@
-# blog-sharon
+# blog-sharon  QQ群交流：924715723
 
 #### 项目介绍
-简单微信笔记小程序
+简单微信笔记小程序.
 
+
+### 项目架构
+- SpringBoot2.0 h2数据库
+-  html2wxml  用于微信小程序的HTML和Markdown格式的富文本渲染组件，支持代码高亮（https://gitee.com/qwqoffice/html2wxml）部署小程序需要集成插件
 
 
 ### 效果图如下
@@ -31,10 +35,13 @@
 海报分享
 ![输入图片说明](https://images.gitee.com/uploads/images/2018/1224/215211_fd208f9f_1478371.png "屏幕截图.png")
 
-### 接口
-https://gitee.com/qinxuewu/blog-sharon/wikis/pages
 
-![输入图片说明](https://images.gitee.com/uploads/images/2018/1224/002832_288da88c_1478371.png "屏幕截图.png")
+### 体验地址
+
+![输入图片说明](https://images.gitee.com/uploads/images/2018/1225/094055_a1254ebd_1478371.png "wuliao2.png")
+
+
+
 
 
 
@@ -69,7 +76,8 @@ nohup java -Xms256m -Xmx256m -jar halo-latest.jar  &
 
 ### 接口地址
 - 域名：https://www.qinxuewu.club/
-
+- https://gitee.com/qinxuewu/blog-sharon/wikis/pages
+![输入图片说明](https://images.gitee.com/uploads/images/2018/1224/002832_288da88c_1478371.png "屏幕截图.png")
 
 ### 文章分类接口
 
