@@ -3,7 +3,7 @@
 const app = getApp();
 const util = require('../../utils/util.js');
 const { $Toast } = require('../../dist/base/index');
-var  pageNo=1;
+var pageNo=1;
 Page({
   data: {
     current: 0,//当前所在滑块的 index
@@ -33,24 +33,21 @@ Page({
     this.getIndexList();
     this.getCategories();
   },
-  //生命周期函数--监听页面显示  底部tab切换时会每次
-  onShow: function () {
-    
-  },
    /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    wx.showLoading({title: '刷新中',});
-      //用户下拉刷新
+    // 显示顶部刷新图标
+    wx.showNavigationBarLoading();
     this.data.content=[];
-    console.log('下拉刷新清空数据');
-    console.log(this.data.content)
+    pageNo = 1;
     this.getIndexList();
-      //停止当前页面下拉刷新。
-      wx.stopPullDownRefresh()
-      setTimeout(function () {
-        wx.hideLoading()
+  
+    setTimeout(function () {
+        // 隐藏导航栏加载框
+        wx.hideNavigationBarLoading();
+        //停止当前页面下拉刷新。
+        wx.stopPullDownRefresh()
       }, 1500)
   },
   /**

@@ -25,32 +25,12 @@ Page({
     var that = this;
     this.getIndexList();
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-   
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
+  details(e) {
+    //详情页跳转
+    console.log(e.currentTarget.id)
+    wx.navigateTo({
+      url: '../details/details?id=' + e.currentTarget.id
+    })
 
   },
 
@@ -58,7 +38,16 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    wx.showLoading({ title: '刷新中', });
+    //用户下拉刷新
+    this.data.content = [];
+    pageNo = 1;
+    this.getIndexList();
+    //停止当前页面下拉刷新。
+    wx.stopPullDownRefresh()
+    setTimeout(function () {
+      wx.hideLoading()
+    }, 1500)
   },
 
   /**
@@ -75,16 +64,17 @@ Page({
     * 页面相关事件处理函数--监听用户下拉动作
     */
   onPullDownRefresh: function () {
-    wx.showLoading({ title: '刷新中', });
-    //用户下拉刷新
+    // 显示顶部刷新图标
+    wx.showNavigationBarLoading();
     this.data.content = [];
-    console.log('下拉刷新清空数据');
-    console.log(this.data.content)
-     this.getIndexList();
-    //停止当前页面下拉刷新。
-    wx.stopPullDownRefresh()
+    pageNo = 1;
+    this.getIndexList();
+
     setTimeout(function () {
-      wx.hideLoading()
+      // 隐藏导航栏加载框
+      wx.hideNavigationBarLoading();
+      //停止当前页面下拉刷新。
+      wx.stopPullDownRefresh()
     }, 1500)
   },
   /**

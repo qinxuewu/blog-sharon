@@ -64,6 +64,23 @@ Page({
         hasUserInfo: true
       })
       this.setData({ hiddenName: true })
+      //调用登录
+      wx.login({
+        success(res) {
+          console.log('code:'+res.code);
+          if (res.code) {
+            // 必须是在用户已经授权的情况下调用
+            wx.getUserInfo({
+              success(res) {
+                console.log('encryptedData:'+res.encryptedData);
+                console.log('iv:'+res.iv);
+               
+              }
+            })
+          } 
+        }
+      })
+
     } else {
       //用户按了拒绝按钮
       console.log('用户按了拒绝按钮')
@@ -89,7 +106,8 @@ Page({
     this.create();
     //创建初始化图片
 
-  },onShow:function(){
+  },
+  onShow:function(){
     this.setData({
       maskHidden: true,
       showhaibao: false
@@ -126,7 +144,7 @@ Page({
     let that = this;
     //图片一把是通过接口请求后台，返回俩点地址，或者网络图片
     let bg = 'https://www.qinxuewu.club/upload/2018/11/170644l325qooyabhioyaa20181224181300736.jpg';
-    let qr = 'https://www.qinxuewu.club/upload/2018/11/qrcode20181224170521740.jpg';
+    let qr = 'http://www.qinxuewu.club/upload/2018/11/gh_389b881555ad_25820181225234435110.jpg';
     //图片区别下载完成，生成临时路径后，在尽心绘制
     this.getImageAll([bg, qr]).then((res) => {
       let bg = res[0];
@@ -210,5 +228,14 @@ Page({
             })
           }
         });
+  }, onPullDownRefresh() {
+    // 显示顶部刷新图标
+    wx.showNavigationBarLoading();
+    setTimeout(function () {
+      // 隐藏导航栏加载框
+      wx.hideNavigationBarLoading();
+      //停止当前页面下拉刷新。
+      wx.stopPullDownRefresh()
+    }, 1000)
   }
 })

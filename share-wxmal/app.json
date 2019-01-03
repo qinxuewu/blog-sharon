@@ -7,10 +7,11 @@
     "pages/list/list",
     "pages/search/search",
     "pages/webview/webview",
-    "pages/placard/placard"
+    "pages/placard/placard",
+    "pages/about/about"
   ],
   "window": {
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "印象文档",
     "navigationBarTextStyle": "black",

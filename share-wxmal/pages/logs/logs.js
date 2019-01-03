@@ -12,9 +12,12 @@ Page({
     this.getCategories();
   },
 
-  /**
-   * 用户点击右上角分享
-   */
+  onPullDownRefresh: function () {
+ 
+    this.data.result=[];
+    this.getCategories();
+    wx.stopPullDownRefresh();
+  },
   onShareAppMessage: function (res) {
     return {
       title: '印象文档',

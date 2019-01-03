@@ -35,7 +35,15 @@ Page({
     console.log(e);
   },
   onPullDownRefresh() {
+    // 显示顶部刷新图标
+    wx.showNavigationBarLoading();
     this.onLoad();
+    setTimeout(function () {
+      // 隐藏导航栏加载框
+      wx.hideNavigationBarLoading();
+      //停止当前页面下拉刷新。
+      wx.stopPullDownRefresh()
+    }, 1000)
   },
   getDetails:function(id){
     wx.request({

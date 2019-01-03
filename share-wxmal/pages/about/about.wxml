@@ -1,0 +1,31 @@
+<view class='base-padding font-lv3 color-semi content'>
+  <view><text class='color-black'>印象</text> 是由 <text class='color-black'>。W</text> 开发的一款简单的个人博客小程序。前后端都已开源</view>
+  <view class='strong'>更多开源程序，请关注个人开源主页</view>
+  <view>
+      <view>Gitee: https://gitee.com/qinxuewu</view>
+      <view>GitHub: https://github.com/a870439570</view>
+        <image src='https://www.qinxuewu.club/upload/2018/11/QQ%E5%9B%BE%E7%89%872018122509265120181225092717370.png'></image>
+  </view>
+  <view class='strong'>操作简单的Mongodb网页web管理工具</view>
+  <view>
+      <view>Gitee: https://gitee.com/qinxuewu/mongo-web-select</view>
+   
+       <image src='http://www.qinxuewu.club/upload/2018/11/153553_91a7ba66_14783712018122518231917.png'></image>
+
+  </view>
+    <view class='strong'>基于Spring Boot监控远程服务器多个Java应用JVM性能图形化工具
+</view>
+  <view>
+      <view>Gitee: https://gitee.com/qinxuewu/boot-actuator</view>
+      <image src='http://www.qinxuewu.club/upload/2018/11/145529_67e555da_14783712018122518242871.png'></image>
+      <image src='http://www.qinxuewu.club/upload/2018/11/163003_4852ee05_147837120181225182428802.png'></image>
+      <image src='http://www.qinxuewu.club/upload/2018/11/124822_14bd50ee_147837120181225182428483.png'></image>
+  </view>
+  <view class='strong'>联系方式</view>
+  <view>
+      <view>QQ: 870439570</view>
+      <view>QQ群: 924715723</view>
+      <view>邮箱: 870439570@QQ.COM</view>
+  </view>
+
+</view>
