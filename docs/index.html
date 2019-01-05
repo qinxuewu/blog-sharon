@@ -14,12 +14,15 @@
     window.$docsify = {
       name: 'blog-sharon',
       repo: 'https://github.com/a870439570/blog-sharon',
-      coverpage: true,
+      coverpage: 'cover.md',
+      maxLevel: 4,
+      subMaxLevel: 2,
+      auto2top: true,
       search: {
         noData: {
           '/': '找不到结果'
         },
-        paths:'auto', // or 'auto'
+        paths:'auto',
         placeholder: {
           '/': '搜索'
         }
