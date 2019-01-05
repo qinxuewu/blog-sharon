@@ -70,8 +70,6 @@ nohup java -Xms256m -Xmx256m -jar halo-latest.jar  &
 
 ## 接口地址
 - 域名：https://www.qinxuewu.club/
-- https://gitee.com/qinxuewu/blog-sharon/wikis/pages
-![输入图片说明](https://images.gitee.com/uploads/images/2018/1224/002832_288da88c_1478371.png "屏幕截图.png")
 
 ## 文章分类接口
 
