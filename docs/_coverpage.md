@@ -8,4 +8,4 @@
 
 [GitHub](https://github.com/a870439570/blog-sharon)
 [Gitee](https://gitee.com/qinxuewu/blog-sharon)
-[快速开始](#项目介绍)
+[快速开始](#quick-start)
