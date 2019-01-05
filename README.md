@@ -7,6 +7,8 @@
 #### 项目介绍
 简单微信笔记小程序.
 
+### [文档](https://a870439570.github.io/blog-sharon/) 
+
 
 ### 项目架构
 - SpringBoot2.0 h2数据库
