@@ -8,6 +8,7 @@
 简单微信笔记小程序.
 
 ### [文档](https://a870439570.github.io/blog-sharon/) 
+- https://a870439570.github.io/blog-sharon/
 
 
 ### 项目架构
