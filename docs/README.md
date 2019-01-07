@@ -9,53 +9,21 @@
 
 
 
-
- 
-
-### 首页
-
-![输入图片说明](https://images.gitee.com/uploads/images/2018/1223/190517_c9e3945d_1478371.png "屏幕截图.png")
-
-### 分类列
-
-![输入图片说明](https://images.gitee.com/uploads/images/2018/1223/190549_d1b2f361_1478371.png "屏幕截图.png")
-![输入图片说明](https://images.gitee.com/uploads/images/2018/1224/214918_5448ec74_1478371.png "屏幕截图.png")
-
-### 详情页
-
-![输入图片说明](https://images.gitee.com/uploads/images/2018/1223/190907_23c4dcba_1478371.png "屏幕截图.png")
-
-
-### 个人中心
-
-![输入图片说明](https://images.gitee.com/uploads/images/2018/1223/190649_5f950925_1478371.png "屏幕截图.png")
-![输入图片说明](https://images.gitee.com/uploads/images/2018/1224/215038_8714586f_1478371.png "屏幕截图.png")
-
-海报分享
-![输入图片说明](https://images.gitee.com/uploads/images/2018/1224/215211_fd208f9f_1478371.png "屏幕截图.png")
-
-
 ### 体验地址
 
 ![输入图片说明](https://images.gitee.com/uploads/images/2018/1225/094055_a1254ebd_1478371.png "wuliao2.png")
 
 
-
-
-
-
- 
-
-# 后端项目Halo可能是最好的Java博客系统。
+###  后端项目Halo
 **Halo** [ˈheɪloʊ]，意为光环。当然，你也可以当成拼音读(哈喽)。
-
 轻快，简洁，功能强大，使用 Java 开发的博客系统。
 
 
 
 ## 快速开始
 
-源码部署 内置h2数据库：
+###  - 接口项目源码部署
+内置h2数据库
 ```bash
 进入pom目录  cd halo # 
 
@@ -66,12 +34,40 @@
 #运行  cd /target/dist/halo
 nohup java -Xms256m -Xmx256m -jar halo-latest.jar  &
 ```
+###  - 小程序Markdown格式插件集成
+html2wxml  用于微信小程序的HTML和Markdown格式的富文本渲染组件，支持代码高亮
+
+1. 打开小程序管理后台，转到设置 - 第三方服务，点击添加插件
+![添加小程序插件](https://www.qwqoffice.com/html2wxml/images/plugin-1.png "添加小程序插件")
+
+2. 搜索 `html2wxml` ，选中并添加
+![添加小程序插件](https://www.qwqoffice.com/html2wxml/images/plugin-2.png "添加小程序插件")
+
+3. 添加成功
+![添加小程序插件](https://www.qwqoffice.com/html2wxml/images/plugin-3.png "添加小程序插件")
+
+4. 回到小程序开发环境，编辑 `app.json` ，添加插件声明，最新版为 `1.3.0`
+
+        "plugins": {
+            "htmltowxml": {
+                "version": "1.3.0",
+                "provider": "wxa51b9c855ae38f3c"
+            }
+        }
+
+5. 在对应页面的 `json` 文件，比如首页 `index.json`，添加使用插件组件的声明
+
+        "usingComponents": {
+            "htmltowxml": "plugin://htmltowxml/view"
+        }
+
+
 
 
 ## 接口地址
 - 域名：https://www.qinxuewu.club/
 
-## 文章分类接口
+### 文章分类接口
 
 ```
 url地址   /api/categories
@@ -92,7 +88,7 @@ url地址   /api/categories
      }
 ```
 
-## 获取单个分类的信息
+### 获取单个分类的信息
 ```
 url地址   /api/categories/{cateUrl}
 接口类型： get 
@@ -110,7 +106,7 @@ url地址   /api/categories/{cateUrl}
          ]
      }
 ```
-## 根据分类目录查询所有文章 分页
+### 根据分类目录查询所有文章 分页
 ```
 url地址   /api/categories/{cateUrl}/page/{page}
 接口类型： get 
@@ -170,7 +166,7 @@ url地址   /api/categories/{cateUrl}/page/{page}
     }
 ```
 
-## 文章API
+### 文章API
 
 ```
 url地址   /api/post/page/{page}
@@ -207,7 +203,7 @@ url地址   /api/post/page/{page}
         }
     }
 ```
-## 搜索文章
+### 搜索文章
 
 ```
 url地址   /api/post/search?keyword=xxx&page=1
@@ -239,7 +235,7 @@ url地址   /api/post/search?keyword=xxx&page=1
 ```
 
 
-## 获取单个文章信息
+### 获取单个文章信息
 
 
 ```
@@ -272,7 +268,7 @@ url地址   /api/post/{postId}
     }
 ```
 
-## 获取所有标签
+### 获取所有标签
 
 ```
 url地址   /api/tags
@@ -292,7 +288,7 @@ url地址   /api/tags
      }
 ```
 
-## 获取单个标签
+### 获取单个标签
 
 ```
 url地址   /api/tags/{tagUrl}
@@ -302,7 +298,7 @@ url地址   /api/tags/{tagUrl}
  {"code":200,"msg":"OK","result":{"tagId":32,"tagName":"jvm","tagUrl":"jvm"}}
 ```
 
-## 文章归档API  根据年份归档
+### 文章归档API  根据年份归档
 
 ```
 url地址   /api/archives/year
@@ -343,7 +339,7 @@ url地址   /api/archives/year
      }
 ```
 
-## 文章归档API  根据月份归档
+### 文章归档API  根据月份归档
 
 ```
 url地址   /api/archives/year/
