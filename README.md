@@ -45,8 +45,7 @@
 
 
 
-
-### 后端项目 Halo 可能是最好的 Java 博客系统。
+### 后端项目 [Halo ](https://github.com/halo-dev/halo)可能是最好的 Java 博客系统。
 **Halo** [ˈheɪloʊ]，意为光环。当然，你也可以当成拼音读(哈喽)。
 
 轻快，简洁，功能强大，使用 Java 开发的博客系统。
